@@ -1,88 +1,357 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
+<html lang="en">
+
+
+
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/logo.jpeg">
     <title>Ace Test House</title>
-    <link rel="stylesheet" href="../static/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
-  </head>
-  <body>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
 
-    <input type="checkbox" id="check">
-    <!--header area start-->
-    <header>
-      <label for="check">
-        <i class="fas fa-bars" id="sidebar_btn"></i>
-      </label>
-      <div class="left_area">
-        <h3>Ace Test <span>House</span></h3>
-      </div>
-      <div class="right_area">
-        <a href="#" class="logout_btn">Logout</a>
-      </div>
-    </header>
-    <!--header area end-->
-    <!--mobile navigation bar start-->
-    <div class="mobile_nav">
-      <div class="nav_bar">
-        <img src="../static/images/logo.jpeg" class="mobile_profile_image" alt="">
-        <i class="fa fa-bars nav_btn"></i>
-      </div>
-      <div class="mobile_nav_items">
-        <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-        <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
-        <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
-        <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
-        <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
-        <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
-      </div>
-    </div>
-    <!--mobile navigation bar end-->
-    <!--sidebar start-->
-    <div class="sidebar">
-      <div class="profile_info">
-        <img src="../static/images/logo.jpeg" class="profile_image" alt="">
-        <h4>Jessica</h4>
-      </div>
-      <a href="#"><i class="fas fa-desktop"></i><span>Dashboard</span></a>
-      <a href="#"><i class="fas fa-cogs"></i><span>Components</span></a>
-      <a href="#"><i class="fas fa-table"></i><span>Tables</span></a>
-      <a href="#"><i class="fas fa-th"></i><span>Forms</span></a>
-      <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
-      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
-    </div>
-    <!--sidebar end-->
+    <script src="https://use.fontawesome.com/cb46d6a643.js"></script>
 
-    <div class="content">
+</head>
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-4">.col-sm-4</div>
-                <div class="col-sm-4">.col-sm-4</div>
-                <div class="col-sm-4">.col-sm-4</div>
-              </div> 
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+	<div class="header-left">
+		<a href="index-2.html" class="logo">
+			<img src="../static/images/logo.jpeg" width="35" height="35" alt=""> <span>Ace Test House</span>
+		</a>
+	</div>
+	<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+    <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+    <ul class="nav user-menu float-right">
+        <li class="nav-item dropdown d-none d-sm-block">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><i class="fa fa-bell-o"></i> <span class="badge badge-pill bg-danger float-right">3</span></a>
+            <div class="dropdown-menu notifications">
+                <div class="topnav-dropdown-header">
+                    <span>Notifications</span>
+                </div>
+                <div class="drop-scroll">
+                    <ul class="notification-list">
+                        <li class="notification-message">
+                            <a href="activities.html">
+                                <div class="media">
+									<span class="avatar">
+										<img alt="John Doe" src="http://cosmediq-demo.theeditingfactory.com/assets/admin/img/user.jpg" class="img-fluid">
+									</span>
+									<div class="media-body">
+										<p class="noti-details"><span class="noti-title">John Doe</span> added new task <span class="noti-title">Patient appointment booking</span></p>
+										<p class="noti-time"><span class="notification-time">4 mins ago</span></p>
+									</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="notification-message">
+                            <a href="activities.html">
+                                <div class="media">
+									<span class="avatar">V</span>
+									<div class="media-body">
+										<p class="noti-details"><span class="noti-title">Tarah Shropshire</span> changed the task name <span class="noti-title">Appointment booking with payment gateway</span></p>
+										<p class="noti-time"><span class="notification-time">6 mins ago</span></p>
+									</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="notification-message">
+                            <a href="activities.html">
+                                <div class="media">
+									<span class="avatar">L</span>
+									<div class="media-body">
+										<p class="noti-details"><span class="noti-title">Misty Tison</span> added <span class="noti-title">Domenic Houston</span> and <span class="noti-title">Claire Mapes</span> to project <span class="noti-title">Doctor available module</span></p>
+										<p class="noti-time"><span class="notification-time">8 mins ago</span></p>
+									</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="notification-message">
+                            <a href="activities.html">
+                                <div class="media">
+									<span class="avatar">G</span>
+									<div class="media-body">
+										<p class="noti-details"><span class="noti-title">Rolland Webber</span> completed task <span class="noti-title">Patient and Doctor video conferencing</span></p>
+										<p class="noti-time"><span class="notification-time">12 mins ago</span></p>
+									</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="notification-message">
+                            <a href="activities.html">
+                                <div class="media">
+									<span class="avatar">V</span>
+									<div class="media-body">
+										<p class="noti-details"><span class="noti-title">Bernardo Galaviz</span> added new task <span class="noti-title">Private chat module</span></p>
+										<p class="noti-time"><span class="notification-time">2 days ago</span></p>
+									</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="topnav-dropdown-footer">
+                    <a href="activities.html">View all Notifications</a>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item dropdown d-none d-sm-block">
+            <a href="javascript:void(0);" id="open_msg_box" class="hasnotifications nav-link"><i class="fa fa-comment-o"></i> <span class="badge badge-pill bg-danger float-right">8</span></a>
+        </li>
+        <li class="nav-item dropdown has-arrow">
+            <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
+                <span class="user-img">
+					<img class="rounded-circle" src="http://cosmediq-demo.theeditingfactory.com/assets/admin/img/user.jpg" width="24" alt="Admin">
+					<span class="status online"></span>
+				</span>
+				<span>Admin</span>
+            </a>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="profile.html">My Profile</a>
+				<a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+				<a class="dropdown-item" href="settings.html">Settings</a>
+				<a class="dropdown-item" href="login.html">Logout</a>
+			</div>
+        </li>
+    </ul>
+    <div class="dropdown mobile-user-menu float-right">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+        <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="profile.html">My Profile</a>
+            <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+            <a class="dropdown-item" href="settings.html">Settings</a>
+            <a class="dropdown-item" href="login.html">Logout</a>
         </div>
-      <div class="card">
-        <h3>Dashboard for all users</h3>
-      </div>
-      <div class="card">
-        
-      </div>
-      <div class="card">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-      </div>
     </div>
+</div>
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+        <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+                <li class="menu-title">Main</li>
+                <li class="active">
+                    <a href="#"><i class="fa fa-dashboard"></i> <span>Home</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-wheelchair"></i> <span>Reports</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-file"></i> <span>Job Search</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-calendar"></i> <span>Create Sample</span></a>
+                </li>
+                <!-- <li>
+                    <a href="departments.html"><i class="fa fa-hospital-o"></i> <span>Departments</span></a>
+                </li> -->
+				<li class="submenu">
+					<a href="#"><i class="fa fa-user"></i> <span> Attendance Search </span> <span class="menu-arrow"></span></a>
+					<ul style="display: none;">
+						<li><a href="#">Update Job Permission</a></li>
+						<!-- <li><a href="leaves.html">Leaves</a></li>
+						<li><a href="holidays.html">Holidays</a></li>
+						<li><a href="attendance.html">Attendance</a></li> -->
+					</ul>
+				</li>
+				<li class="submenu">
+					<a href="#"><i class="fa fa-money"></i> <span> Category Delete </span> <span class="menu-arrow"></span></a>
+					<ul style="display: none;">
+						<li><a href="#">Category add</a></li>
+						<!-- <li><a href="payments.html">Payments</a></li> -->
+						<li><a href="#">Expenses</a></li>
+						
+            </ul>
+        </div>
+    </div>
+</div>        <div class="page-wrapper">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                        <div class="dash-widget">
+							<span class="dash-widget-bg1"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+							<div class="dash-widget-info text-right">
+								<h3>Sample Date</h3>
+								
+                
+							</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                      <div class="dash-widget">
+                          <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span>
+                          <div class="dash-widget-info text-right">
+                              <h3>Job ID</h3>
+                              <input type="text">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                    <div class="dash-widget">
+                        <span class="dash-widget-bg4"><i class="fa fa-user-o"></i></span>
+                        <div class="dash-widget-info text-right">
+                            <h3>Sample Number</h3>
+                            <input type="text">
+                        </div>
+                    </div>
+                  </div>
+                    <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                        <div class="dash-widget">
+                            <span class="dash-widget-bg1"><i class="fa fa-user-md" aria-hidden="true"></i></span>
+                            <div class="dash-widget-info text-right">
+                                <h3>Category Name</h3>
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                      <div class="dash-widget">
+                          <span class="dash-widget-bg2"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                          <div class="dash-widget-info text-right">
+                              <h3>Job Status</h3>
+                              <input type="text">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                    <div class="dash-widget">
+                        <span class="dash-widget-bg4"><i class="fa fa-inr" aria-hidden="true"></i></span>
+                        <div class="dash-widget-info text-right">
+                            <h3>Client Name</h3>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+                </div>
+				
+				<div class="row">
+					<div class="col-12 col-md-12 col-lg-12 col-xl-12">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title d-inline-block">Details</h4> <a href="#" class="btn btn-primary float-right">View all</a>
+							</div>
+							<span class="message"></span>
+							<div class="card-body p-0">
+								<div class="table-responsive">
+									<table class="table mb-0">
+										<thead>
+											<tr>
+												<th>Job ID</th>
+												<th>Sample No.</th>
+                        <th>Job Status</th>
+												<th>Sample Date</th>
+												
+											</tr>
+										</thead>
+										<tbody id="upcomming_appointments">
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+                    
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="http://cosmediq-demo.theeditingfactory.com/assets/admin/js/jquery-3.2.1.min.js"></script>
+	<script src="http://cosmediq-demo.theeditingfactory.com/assets/admin/js/popper.min.js"></script>
+    <script src="http://cosmediq-demo.theeditingfactory.com/assets/admin/js/bootstrap.min.js"></script>
+    <script src="http://cosmediq-demo.theeditingfactory.com/assets/admin/js/jquery.slimscroll.js"></script>
+    <script src="http://cosmediq-demo.theeditingfactory.com/assets/admin/js/Chart.bundle.js"></script>
+    <script src="http://cosmediq-demo.theeditingfactory.com/assets/admin/js/chart.js"></script>
+    <script src="http://cosmediq-demo.theeditingfactory.com/assets/admin/js/app.js"></script>
 
-    <script type="text/javascript">
-    $(document).ready(function(){
-      $('.nav_btn').click(function(){
-        $('.mobile_nav_items').toggleClass('active');
-      });
-    });
+    <script>
+    	$(document).ready(function(){
+
+    		fetch_todays_appointment();
+    		function fetch_todays_appointment()
+    		{
+    			$.ajax({
+    				url:"http://cosmediq-demo.theeditingfactory.com/admin/fetch_todays_appointment",
+    				method:"POST",
+    				success:function(data)
+    				{
+    					$('#upcomming_appointments').html(data);
+    				}
+    			});
+    		}
+
+    		$(document).on('click', '.action_btn', function(){
+    			var id = $(this).attr('id');
+    			$('#apt_id').val(id);
+    			$('#action_modal').modal('show');
+    		});
+
+    		$(document).on('click', '#confirm_btn', function(){
+    			var id = $('#apt_id').val();
+    			$.ajax({
+    				url:"http://cosmediq-demo.theeditingfactory.com/admin/confirm_appointment",
+    				method:"POST",
+    				data:{id:id},
+    				beforeSend:function()
+    				{
+    					$('#confirm_btn').prop('disable', true);
+    					$('#cancel_btn').prop('disable', true);
+    					$('#confirm_btn').val('Loading...');
+    				},
+    				success:function(data)
+    				{
+    					$('#confirm_btn').prop('disable', false);
+    					$('#cancel_btn').prop('disable', false);
+    					$('#confirm_btn').val('Confirm Appointment');
+    					fetch_todays_appointment();
+    					$('.message').html(data);
+    					$('#action_modal').modal('hide');
+    				}
+    			});
+    		});
+
+    		$(document).on('click', '#cancel_btn', function(){
+    			var id = $('#apt_id').val();
+    			$.ajax({
+    				url:"http://cosmediq-demo.theeditingfactory.com/admin/cancel_appointment",
+    				method:"POST",
+    				data:{id:id},
+    				beforeSend:function()
+    				{
+    					$('#confirm_btn').prop('disable', true);
+    					$('#cancel_btn').prop('disable', true);
+    					$('#cancel_btn').val('Loading...');
+    				},
+    				success:function(data)
+    				{
+    					$('#confirm_btn').prop('disable', false);
+    					$('#cancel_btn').prop('disable', false);
+    					$('#cancel_btn').val('Cancel Appointment');
+    					fetch_todays_appointment();
+    					$('.message').html(data);
+    					$('#action_modal').modal('hide');
+    				}
+    			});
+    		});
+    	});
     </script>
 
-  </body>
+</body>
+
 </html>
-                           
+
+<div id="action_modal" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-body text-center">
+				<h3>Please Take an Action</h3>
+				<div class="m-t-20"> 
+					<input type="hidden" name="apt_id" id="apt_id">
+					<input type="button" class="btn btn-success" id="confirm_btn" value="Confirm Appointment">
+					<input type="button" id="cancel_btn" class="btn btn-danger" value="Cancel Appointment">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
