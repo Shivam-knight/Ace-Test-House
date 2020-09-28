@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <link rel="shortcut icon" type="image/x-icon" href="../static/images/logo.jpeg">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/logo.png">
     <title>Ace Test House</title>
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -22,7 +22,7 @@
         <div class="header">
 	<div class="header-left">
 		<a href="index-2.html" class="logo">
-			<img src="../static/images/logo.jpeg" width="35" height="35" alt=""> <span>Ace Test House</span>
+			<img src="../static/images/logo.png" width="70" height="70" alt=""> <span>Ace Test House</span>
 		</a>
 	</div>
 	<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
@@ -138,125 +138,41 @@
                     <a href="#"><i class="fa fa-dashboard"></i> <span>Home</span></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-wheelchair"></i> <span>Reports</span></a>
+                    <a href="{% url 'reports' %}"><i class="fa fa-wheelchair"></i> <span>Reports</span></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-file"></i> <span>Job Search</span></a>
+                    <a href="{% url 'jobsearch' %}"><i class="fa fa-file"></i> <span>Job Search</span></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-calendar"></i> <span>Create Sample</span></a>
+                    <a href="{% url 'createSample' %}"><i class="fa fa-calendar"></i> <span>Create Sample</span></a>
                 </li>
                 <!-- <li>
                     <a href="departments.html"><i class="fa fa-hospital-o"></i> <span>Departments</span></a>
                 </li> -->
 				<li class="submenu">
-					<a href="#"><i class="fa fa-user"></i> <span> Attendance Search </span> <span class="menu-arrow"></span></a>
+					<a href="{% url 'attendance' %}"><i class="fa fa-user"></i> <span> Attendance Search </span> <span class="menu-arrow"></span></a>
 					<ul style="display: none;">
-						<li><a href="#">Update Job Permission</a></li>
+						<li><a href="{% url 'attendance' %}">Update Job Permission</a></li>
 						<!-- <li><a href="leaves.html">Leaves</a></li>
 						<li><a href="holidays.html">Holidays</a></li>
 						<li><a href="attendance.html">Attendance</a></li> -->
 					</ul>
 				</li>
 				<li class="submenu">
-					<a href="#"><i class="fa fa-money"></i> <span> Category Delete </span> <span class="menu-arrow"></span></a>
+					<a href="{% url 'category' %}"><i class="fa fa-money"></i> <span> Category Delete </span> <span class="menu-arrow"></span></a>
 					<ul style="display: none;">
-						<li><a href="#">Category add</a></li>
+						<li><a href="{% url 'category' %}">Category add</a></li>
 						<!-- <li><a href="payments.html">Payments</a></li> -->
-						<li><a href="#">Expenses</a></li>
+						<li><a href="{% url 'category' %}">Category delete</a></li>
 						
             </ul>
         </div>
     </div>
-</div>        <div class="page-wrapper">
-            <div class="content">
-                <div class="row">
-                    <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
-                        <div class="dash-widget">
-							<span class="dash-widget-bg1"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-							<div class="dash-widget-info text-right">
-								<h3>Sample Date</h3>
-								
-                
-							</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
-                      <div class="dash-widget">
-                          <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span>
-                          <div class="dash-widget-info text-right">
-                              <h3>Job ID</h3>
-                              <input type="text">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
-                    <div class="dash-widget">
-                        <span class="dash-widget-bg4"><i class="fa fa-user-o"></i></span>
-                        <div class="dash-widget-info text-right">
-                            <h3>Sample Number</h3>
-                            <input type="text">
-                        </div>
-                    </div>
-                  </div>
-                    <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
-                        <div class="dash-widget">
-                            <span class="dash-widget-bg1"><i class="fa fa-user-md" aria-hidden="true"></i></span>
-                            <div class="dash-widget-info text-right">
-                                <h3>Category Name</h3>
-                                <input type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
-                      <div class="dash-widget">
-                          <span class="dash-widget-bg2"><i class="fa fa-plus" aria-hidden="true"></i></span>
-                          <div class="dash-widget-info text-right">
-                              <h3>Job Status</h3>
-                              <input type="text">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
-                    <div class="dash-widget">
-                        <span class="dash-widget-bg4"><i class="fa fa-inr" aria-hidden="true"></i></span>
-                        <div class="dash-widget-info text-right">
-                            <h3>Client Name</h3>
-                            <input type="text">
-                        </div>
-                    </div>
-                </div>
-                </div>
-				
-				<div class="row">
-					<div class="col-12 col-md-12 col-lg-12 col-xl-12">
-						<div class="card">
-							<div class="card-header">
-								<h4 class="card-title d-inline-block">Details</h4> <a href="#" class="btn btn-primary float-right">View all</a>
-							</div>
-							<span class="message"></span>
-							<div class="card-body p-0">
-								<div class="table-responsive">
-									<table class="table mb-0">
-										<thead>
-											<tr>
-												<th>Job ID</th>
-												<th>Sample No.</th>
-                        <th>Job Status</th>
-												<th>Sample Date</th>
-												
-											</tr>
-										</thead>
-										<tbody id="upcomming_appointments">
-											
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
-                    
-    <div class="sidebar-overlay" data-reff=""></div>
+</div>        
+{% block content %}
+
+{% endblock content %}
+    
     <script src="http://cosmediq-demo.theeditingfactory.com/assets/admin/js/jquery-3.2.1.min.js"></script>
 	<script src="http://cosmediq-demo.theeditingfactory.com/assets/admin/js/popper.min.js"></script>
     <script src="http://cosmediq-demo.theeditingfactory.com/assets/admin/js/bootstrap.min.js"></script>

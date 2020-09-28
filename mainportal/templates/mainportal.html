@@ -1,1 +1,108 @@
 {% extends 'base.html' %}
+{% block content %}
+<div class="page-wrapper">
+    <div class="content">
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div class=" row form-group">
+                <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                    <div class="dash-widget">
+                        <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span> <br>
+                        <div class="dash-widget-info text-right">
+                            <h3>Job ID</h3> <br>
+                            <input type="text" class="form-control" name="job_id" placeholder="Enter Job Id">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                    <div class="dash-widget">
+                        <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span> <br>
+                        <div class="dash-widget-info text-right">
+                            <h3>Report No.</h3> <br>
+                            <input type="text" class="form-control" name="report_no" placeholder="Enter Report Number">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                    <div class="dash-widget">
+                        <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span> <br>
+                        <div class="dash-widget-info text-right">
+                            <h3>Client Info</h3> <br>
+                            <input type="text" class="form-control" name="client_info" placeholder="Enter Client">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                    <div class="dash-widget">
+                        <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span> <br>
+                        <div class="dash-widget-info text-right">
+                            <h3>Sample Type</h3> <br>
+                            
+                            <select name="sample_type" class="form-control" id="sample_type">
+                                <option value="CHEMICAL">CHEMICAL</option>
+                                <option value="MECHANICAL">MECHANICAL</option>
+                                <option value="BOTH">BOTH</option>
+                                
+                              </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                    <div class="dash-widget">
+                        <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span> <br>
+                        <div class="dash-widget-info text-right">
+                            <h3>Date</h3> <br>
+                            <input type="Date" class="form-control" name="client_info" placeholder="Enter Client">
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+            </div>
+            
+            <button type="submit" class="btn btn-primary">ADD DATA</button>
+          </form>
+
+      
+        
+        
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title d-inline-block">Details</h4> <a href="#" class="btn btn-primary float-right">View all</a>
+                    </div>
+                    <span class="message"></span>
+                    <div class="card-body p-0">
+                        <table class="table responsive table-bordered">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">Job ID</th>
+                                <th scope="col">Report Number</th>
+                                <th scope="col">Client Info</th>
+                                <th scope="col">Sample Type</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                               {% for obj in all_id %}
+                              <tr>
+                                <th scope="row">{{ obj.job_id }}</th>
+                                <td>{{ obj.report_no }}</td>
+                                <td>{{ obj.client_info }}</td>
+                                <td>{{ obj.sample_type }}</td>
+                              </tr>
+                              
+                              {% endfor %}
+                            </tbody>
+                          </table>
+                          
+                          
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-overlay" data-reff=""></div>
+{% endblock content %}           
