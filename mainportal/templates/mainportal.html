@@ -20,7 +20,7 @@
                         <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span> <br>
                         <div class="dash-widget-info text-right">
                             <h3>Report No.</h3> <br>
-                            <input type="text" class="form-control" name="report_no" placeholder="Enter Report Number">
+                            <input type="text" id="demo" class="form-control" name="report_no" placeholder="Enter Report Number">
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,19 @@
                         <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span> <br>
                         <div class="dash-widget-info text-right">
                             <h3>Date</h3> <br>
-                            <input type="Date" class="form-control" name="client_info" placeholder="Enter Client">
+                            <input type="Date" class="form-control" name="date" placeholder="Enter Client">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-lg-4 col-xl-4">
+                    <div class="dash-widget">
+                        <span class="dash-widget-bg2"><i class="fa fa-user-o"></i></span> <br>
+                        <div class="dash-widget-info text-right">
+                            <h3>Upload letter</h3> <br>
+                            <div class="custom-file">
+                                <input type="file" name="letter" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile"></label>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,7 +76,7 @@
                 
             </div>
             
-            <button type="submit" class="btn btn-primary">ADD DATA</button>
+            <button type="submit" class="btn btn-primary" onclick="myFunction()">ADD DATA</button>
           </form>
 
       
@@ -105,4 +117,9 @@
                 </div>
             </div>
             <div class="sidebar-overlay" data-reff=""></div>
+<script>
+    function myFunction() {
+    document.getElementById("demo").value = "ATH" + Math.round((Math.random()*(50 - 1) + 1)) +"-"+Math.round((Math.random()*(99999999 - 10000000) + 10000000));
+    }
+</script>
 {% endblock content %}           
