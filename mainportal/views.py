@@ -2,8 +2,11 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from mainportal.models import home
 from mainportal.forms import homeform
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+
+@login_required
 def mainportal(request):
     if request.method == "POST":
         job_id = request.POST.get('job_id')

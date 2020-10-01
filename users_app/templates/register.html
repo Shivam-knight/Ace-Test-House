@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/logo.png">
+    <title>Ace Test House</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="../static/css/styles1.css">
+
+    <script src="https://use.fontawesome.com/cb46d6a643.js"></script>
+
+</head>
+{% load crispy_forms_tags %}
+<div class="login-box mt-5" style="background-color: lightgrey;
+width: 900px;
+border: 5px solid black;
+padding: 50px;
+margin: 10px;
+">
+    <img src="../../static/images/logo.png" class="center" style="width: 100px; " alt="">
+    <br>
+    <h2>Register </h2>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endif %}
+    <form method="POST" class="mt-5 col-6">
+        {% csrf_token %}
+        {{ register_form|crispy }}
+        <button type="submit" class="btn btn-success mb-5">Register</button>
+    </form>
+</div>
